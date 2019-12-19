@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="changgou-gateway" />
+        <module name="changgou-service-file" />
+        <module name="changgou-web" />
+        <module name="changgou-db" />
+        <module name="changgou-common" />
+        <module name="changgou-service-api-goods" />
+        <module name="changgou-service-goods" />
+        <module name="changgou-eureka" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="changgou" target="11" />
+      <module name="changgou-common" target="11" />
+      <module name="changgou-db" target="11" />
+      <module name="changgou-eureka" target="11" />
+      <module name="changgou-gateway" target="11" />
+      <module name="changgou-service" target="11" />
+      <module name="changgou-service-api" target="11" />
+      <module name="changgou-service-api-goods" target="11" />
+      <module name="changgou-service-file" target="11" />
+      <module name="changgou-service-goods" target="11" />
+      <module name="changgou-web" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="changgou" options="-parameters" />
+      <module name="changgou-common" options="-parameters" />
+      <module name="changgou-db" options="-parameters" />
+      <module name="changgou-eureka" options="-parameters" />
+      <module name="changgou-gateway" options="-parameters" />
+      <module name="changgou-service" options="" />
+      <module name="changgou-service-api" options="-parameters" />
+      <module name="changgou-service-api-goods" options="-parameters" />
+      <module name="changgou-service-file" options="-parameters" />
+      <module name="changgou-service-goods" options="-parameters" />
+      <module name="changgou-web" options="-parameters" />
+    </option>
+  </component>
+</project>

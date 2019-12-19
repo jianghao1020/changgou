@@ -1,0 +1,27 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: goods
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/changgou_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+logging:
+  level:
+    com.changgou.service.goods.mapper: debug
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.changgou.service.api.goods.pojo
