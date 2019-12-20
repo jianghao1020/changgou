@@ -55,8 +55,9 @@ public class SpecController {
 
     /**
      * 根据分类ID查询模板规格信息
+     *
      * @param categoryId categoryId
-     * @return
+     * @return list
      */
     @GetMapping(value = "category/{id}")
     public Result findByCategoryId(@PathVariable(value = "id") Integer categoryId) {
