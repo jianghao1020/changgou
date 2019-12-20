@@ -1,7 +1,6 @@
 package com.changgou.service.api.goods.pojo;
 
 import lombok.Data;
-import lombok.ToString;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,9 +9,8 @@ import java.io.Serializable;
 /**
  * @author oliver
  */
-@Table(name="tb_template")
+@Table(name = "tb_template")
 @Data
-@ToString
 public class Template implements Serializable {
 
     /**

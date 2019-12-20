@@ -1,7 +1,6 @@
 package com.changgou.service.api.goods.pojo;
 
 import lombok.Data;
-import lombok.ToString;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -12,7 +11,6 @@ import java.io.Serializable;
  */
 @Table(name = "tb_spec")
 @Data
-@ToString
 public class Spec implements Serializable {
 
     /**
