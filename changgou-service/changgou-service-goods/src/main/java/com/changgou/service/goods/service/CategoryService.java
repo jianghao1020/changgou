@@ -77,8 +77,8 @@ public interface CategoryService {
     /**
      * 根据父级ID查询
      *
-     * @param id 父级id
+     * @param parentId 父级id
      * @return list
      */
-    List<Category> findByParentId(Integer id);
+    List<Category> findByParentId(Integer parentId);
 }

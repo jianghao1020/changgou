@@ -103,7 +103,6 @@ public class CategoryController {
     }
 
     /**
-     *
      * @return list
      */
     @GetMapping
@@ -111,5 +110,17 @@ public class CategoryController {
         //调用CategoryService实现查询所有Category
         List<Category> list = categoryService.findAll();
         return new Result(true, StatusCode.OK, "查询成功", list);
+    }
+
+    /**
+     * 根据父节点id查询子分类
+     *
+     * @param parentId 父级id
+     * @return list
+     */
+    @GetMapping(value = "list/{parentId}")
+    public Result findByParentId(@PathVariable Integer parentId) {
+        List<Category> categoryList = categoryService.findByParentId(parentId);
+        return new Result(true, StatusCode.OK, "查询子节点成功", categoryList);
     }
 }

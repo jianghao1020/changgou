@@ -74,8 +74,10 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<Category> findByParentId(Integer id) {
-        return categoryMapper.selectby;
+    public List<Category> findByParentId(Integer parentId) {
+        Category category = new Category();
+        category.setParentId(parentId);
+        return categoryMapper.select(category);
     }
 
     private Example createExample(Category category) {
