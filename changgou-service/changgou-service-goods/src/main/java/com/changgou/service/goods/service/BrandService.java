@@ -29,6 +29,8 @@ public interface BrandService {
 
     /**
      * 品牌新增
+     *
+     * @param brand brand
      */
     void add(Brand brand);
 
@@ -41,6 +43,8 @@ public interface BrandService {
 
     /**
      * 品牌删除
+     *
+     * @param id id
      */
     void delById(Integer id);
 
@@ -88,4 +92,12 @@ public interface BrandService {
      * @return list
      */
     List<Map<String, Object>> findBrandListByCategoryName(String categoryName);
+
+    /**
+     * 根据分类id查询品牌集合
+     *
+     * @param categoryId categoryId
+     * @return list
+     */
+    List<Brand> findBrandByCategoryId(Integer categoryId);
 }

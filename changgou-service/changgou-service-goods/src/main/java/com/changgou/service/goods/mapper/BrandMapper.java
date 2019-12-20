@@ -20,5 +20,14 @@ public interface BrandMapper extends Mapper<Brand> {
      * @return list
      */
     @Select("SELECT name,image FROM tb_brand where id in( SELECT brand_id FROM tb_category_brand WHERE category_id in ( SELECT id from tb_category where name=#{categoryName}))")
-    List<Map<String,Object>> findBrandListByCategoryName(@Param("categoryName") String categoryName);
+    List<Map<String, Object>> findBrandListByCategoryName(@Param("categoryName") String categoryName);
+
+    /**
+     * 根据分类id查询品牌集合
+     *
+     * @param categoryId categoryId
+     * @return list
+     */
+    @Select("select * from tb_brand tb,tb_category_brand tcb where tb.id = tcb.brand_id and tcb.category_id = #{categoryId}")
+    List<Brand> findBrandByCategoryId(Integer categoryId);
 }

@@ -82,6 +82,11 @@ public class BrandServiceImpl implements BrandService {
         return brandMapper.findBrandListByCategoryName(categoryName);
     }
 
+    @Override
+    public List<Brand> findBrandByCategoryId(Integer categoryId) {
+        return brandMapper.findBrandByCategoryId(categoryId);
+    }
+
     public Example createExample(Brand brand) {
         // 动态构建条件Example,criteria:动态组装条件
         Example example = new Example(Brand.class);
