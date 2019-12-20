@@ -24,31 +24,31 @@ public interface CategoryService {
     /**
      * Category分页查询
      *
-     * @param page
-     * @param size
-     * @return
+     * @param page page
+     * @param size size
+     * @return pageInfo
      */
     PageInfo<Category> findPage(int page, int size);
 
     /**
      * Category多条件搜索方法
      *
-     * @param category
-     * @return
+     * @param category category
+     * @return lost
      */
     List<Category> findList(Category category);
 
     /**
      * 删除Category
      *
-     * @param id
+     * @param id id
      */
     void delete(Integer id);
 
     /**
      * 修改Category数据
      *
-     * @param category
+     * @param category category
      */
     void update(Category category);
 
