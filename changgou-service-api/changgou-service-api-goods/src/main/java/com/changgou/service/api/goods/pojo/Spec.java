@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * @author oliver
  */
-@Table(name = "tb_spu")
+@Table(name = "tb_spec")
 @Data
 @ToString
 public class Spec implements Serializable {
@@ -22,107 +22,22 @@ public class Spec implements Serializable {
     private String id;
 
     /**
-     * 货号
-     */
-    private String sn;
-
-    /**
-     * SPU名
+     * 名称
      */
     private String name;
 
     /**
-     * 副标题
+     * 规格选项
      */
-    private String caption;
+    private String options;
 
     /**
-     * 品牌ID
+     * 排序
      */
-    private Integer brandId;
-
-    /**
-     * 一级分类
-     */
-    private Integer category1Id;
-
-    /**
-     * 二级分类
-     */
-    private Integer category2Id;
-
-    /**
-     * 三级分类
-     */
-    private Integer category3Id;
+    private String seq;
 
     /**
      * 模板ID
      */
     private Integer templateId;
-
-    /**
-     * 运费模板id
-     */
-    private Integer freightId;
-
-    /**
-     * 图片
-     */
-    private String image;
-
-    /**
-     * 图片列表
-     */
-    private String images;
-
-    /**
-     * 售后服务
-     */
-    private String saleService;
-
-    /**
-     * 介绍
-     */
-    private String introduction;
-
-    /**
-     * 规格列表
-     */
-    private String specItems;
-
-    /**
-     * 参数列表
-     */
-    private String paraItems;
-
-    /**
-     * 销量
-     */
-    private Integer saleNum;
-
-    /**
-     * 评论数
-     */
-    private Integer commentNum;
-
-    /**
-     * 是否上架
-     */
-    private String isMarketable;
-
-    /**
-     * 是否启用规格
-     */
-    private String isEnableSpec;
-
-    /**
-     * 是否删除
-     */
-    private String isDelete;
-
-    /**
-     * 审核状态
-     */
-    private String status;
 }
